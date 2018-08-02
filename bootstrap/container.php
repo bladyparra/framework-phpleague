@@ -20,5 +20,6 @@
   });
 
   $container->addServiceProvider(new \Application\Providers\SessionServiceProvider);
-
-  Kint::dump($container->get(\Application\Services\Session::class));
+  $container->addServiceProvider(new \Application\Providers\ViewServiceProvider);
+  
+  Kint::dump($container->get(\Application\Services\View::class));
