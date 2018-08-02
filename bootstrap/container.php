@@ -21,3 +21,9 @@
   $container->addServiceProvider(new \Application\Providers\ViewServiceProvider);
 
   $route = require base_path('routes/web.php');
+
+  $container->share('emitter', \Zend\Diactoros\Response\Zend\Diactoros\Response\SapiEmitter::class);
+
+  $response = $route->dispatch($container->get('request'), $container->get('response'));
+
+  $container->get('emitter')->emit($response);
