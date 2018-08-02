@@ -13,6 +13,7 @@
 
     public function index($request, $response)
     {
-      
+      $user = 'Bparra';
+      return $this->view->render('home.twig', compact('user'));
     }
   }

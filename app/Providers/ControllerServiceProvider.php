@@ -4,6 +4,7 @@
 
   use League\Container\ServiceProvider\AbstractServiceProvider;
   use Application\Controllers\HomeController;
+  use Application\Services\View;
 
 
   class ControllerServiceProvider extends AbstractServiceProvider {
