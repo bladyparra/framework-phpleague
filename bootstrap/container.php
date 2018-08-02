@@ -8,8 +8,6 @@
   $dotenv = new \Dotenv\Dotenv(base_path(''));
   $dotenv->load();
 
-  Kint::dump(getenv('DB_NAME'));
-
   $container = new \League\Container\Container;
 
   $container->share('response', \Zend\Diactoros\Response::class);
@@ -21,5 +19,5 @@
 
   $container->addServiceProvider(new \Application\Providers\SessionServiceProvider);
   $container->addServiceProvider(new \Application\Providers\ViewServiceProvider);
-  
-  Kint::dump($container->get(\Application\Services\View::class));
+
+  $route = require base_path('routes/web.php');
