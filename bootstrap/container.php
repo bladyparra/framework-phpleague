@@ -19,6 +19,7 @@
 
   $container->addServiceProvider(new \Application\Providers\SessionServiceProvider);
   $container->addServiceProvider(new \Application\Providers\ViewServiceProvider);
+  $container->addServiceProvider(new \Application\Providers\ControllerServiceProvider);
 
   $route = require base_path('routes/web.php');
 

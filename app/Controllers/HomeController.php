@@ -13,6 +13,6 @@
 
     public function index($request, $response)
     {
-    \Kint::dump('request');
+      
     }
   }
