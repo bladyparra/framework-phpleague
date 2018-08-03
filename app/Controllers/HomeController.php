@@ -14,7 +14,7 @@
 
     public function index($request, $response)
     {
-      $user = 'Bparra';
+      $user = User::with('posts')->find(1);
       return $this->view->render('home', compact('user'));
     }
 

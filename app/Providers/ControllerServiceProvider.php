@@ -6,6 +6,7 @@
   use Application\Controllers\HomeController;
   use Application\Services\Twig;
   use Application\Controllers\ProfileController;
+  use Application\Services\Blade;
 
 
   class ControllerServiceProvider extends AbstractServiceProvider {
@@ -25,7 +26,7 @@
     public function register()
     {
       $this->getContainer()->add(HomeController::class)->withArguments([
-        $this->getContainer()->get(Twig::class)
+        $this->getContainer()->get(Blade::class)
       ]);
       $this->getContainer()->add(ProfileController::class)->withArguments([
         $this->getContainer()->get(Twig::class)
