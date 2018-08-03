@@ -23,3 +23,8 @@ http://container.thephpleague.com/
 #Puedes descargar el Framework e instalarlo con composer
 
 composer install
+
+##Se implementa Blade
+https://github.com/jenssegers/blade
+
+composer require jenssegers/blade

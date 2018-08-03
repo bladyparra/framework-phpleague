@@ -10,7 +10,8 @@
         "aura/session": "^2.1",
         "zendframework/zend-diactoros": "^1.8",
         "kint-php/kint": "^2.2",
-        "vlucas/phpdotenv": "^2.5"
+        "vlucas/phpdotenv": "^2.5",
+        "jenssegers/blade": "^1.1"
     },
     "authors": [
         {
