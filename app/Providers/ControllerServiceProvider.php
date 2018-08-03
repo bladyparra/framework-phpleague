@@ -4,7 +4,7 @@
 
   use League\Container\ServiceProvider\AbstractServiceProvider;
   use Application\Controllers\HomeController;
-  use Application\Services\View;
+  use Application\Services\Twig;
   use Application\Controllers\ProfileController;
 
 
@@ -25,10 +25,10 @@
     public function register()
     {
       $this->getContainer()->add(HomeController::class)->withArguments([
-        $this->getContainer()->get(View::class)
+        $this->getContainer()->get(Twig::class)
       ]);
       $this->getContainer()->add(ProfileController::class)->withArguments([
-        $this->getContainer()->get(View::class)
+        $this->getContainer()->get(Twig::class)
       ]);
     }
   }

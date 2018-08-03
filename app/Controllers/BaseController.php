@@ -2,7 +2,7 @@
 
   namespace Application\Controllers;
 
-  use Application\Services\View;
+  use Application\Interfaces\ViewInterface;
 
   /**
    * Class BaseController
@@ -11,16 +11,16 @@
   class BaseController {
 
     /**
-     * @var View
+     * @var Twig
      */
     protected $view;
 
     /**
      * BaseController constructor.
      *
-     * @param View $view
+     * @param ViewInterface $view
      */
-    public function __construct(View $view)
+    public function __construct(ViewInterface $view)
     {
       $this->view = $view;
     }

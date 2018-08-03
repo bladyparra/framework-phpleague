@@ -2,11 +2,11 @@
 
   namespace Application\Controllers;
 
-  use Application\Services\View;
+  use Application\Services\Twig;
 
   class ProfileController extends BaseController {
 
-    public function __construct(View $view)
+    public function __construct(Twig $view)
     {
       parent::__construct($view);
     }

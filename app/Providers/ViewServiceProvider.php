@@ -2,7 +2,7 @@
 
   namespace Application\Providers;
 
-  use Application\Services\View;
+  use Application\Services\Twig;
   use League\Container\ServiceProvider\AbstractServiceProvider;
 
 
@@ -12,7 +12,7 @@
      * @var array
      */
     protected $provides = [
-      View::class
+      Twig::class
     ];
 
     /**
@@ -21,7 +21,7 @@
      */
     public function register()
     {
-      $this->getContainer()->add(View::class)->withArgument(
+      $this->getContainer()->add(Twig::class)->withArgument(
         $this->getContainer()->get('response')
       );
     }

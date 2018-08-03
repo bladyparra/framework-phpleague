@@ -3,8 +3,9 @@
   namespace Application\Services;
 
   use Psr\Http\Message\ResponseInterface;
+  use Application\Interfaces\ViewInterface;
 
-  class View {
+  class Twig implements ViewInterface {
 
     /**
      * @var \Twig_Environment

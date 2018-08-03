@@ -3,11 +3,11 @@
   namespace Application\Controllers;
 
   use Application\Models\User;
-  use Application\Services\View;
+  use Application\Interfaces\ViewInterface;
 
   class HomeController extends BaseController {
 
-    public function __construct(View $view)
+    public function __construct(ViewInterface $view)
     {
       parent::__construct($view);
     }
