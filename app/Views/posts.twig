@@ -1,0 +1,10 @@
+{% for post in posts %}
+    <p>
+        Post con titulo
+        {{ post.title }}
+        y body
+        {{ post.body }}, 
+        autor: 
+        {{ post.user.name }}
+    </p>
+{% endfor %}

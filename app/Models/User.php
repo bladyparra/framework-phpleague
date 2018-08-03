@@ -13,4 +13,9 @@
     {
       return $this->orderByRaw("RAND()")->first();
     }
+
+    public function posts()
+    {
+      return $this->hasMany(Post::class);
+    }
   }

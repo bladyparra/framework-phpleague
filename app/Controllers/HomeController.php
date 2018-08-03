@@ -35,4 +35,11 @@
       $users = User::all();
       return $this->view->render('users.twig', compact('users'));
     }
+
+    public function userPosts($request, $response, $args)
+    {
+      $user = User::find($args['id']);
+      $posts = $user->posts;
+      return $this->view->render('posts.twig', compact('posts'));
+    }
   }
