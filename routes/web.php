@@ -14,6 +14,11 @@
     $route->map('GET', '/users', 'Application\Controllers\HomeController::users');
     $route->map('GET', '/profile/{name}/{age}', 'Application\Controllers\ProfileController::index')
           ->middleware($container->get(Auth::class));
+    $route->map('GET', '/config', function (ServerRequestInterface $request, ResponseInterface $response) {
+      $driver = config('environment', 'type');
+      $response->getBody()->write("<h1>{$driver}</h1>");
+      return $response;
+    });
   });
 
   return $route;
